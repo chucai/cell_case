@@ -1,0 +1,22 @@
+
+<h1>Todo list</h1>
+
+<hr>
+
+<div class="input-form">
+  <h5>Todo:  </h5>
+
+  <%= form_tag "/todos", method: :post do %>
+    <%= text_field_tag :description, params[:description], placeholder: "task" %>
+
+    <%= submit_tag "Add" %>
+
+  <% end %>
+</div>
+
+
+<ul>
+  <% @todos.each do |item| %>
+    <li><%= item.description %></li>
+  <% end -%>
+</ul>
