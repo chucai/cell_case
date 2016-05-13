@@ -1,0 +1,7 @@
+<div class="input-form">
+  <h5>Todo:  </h5>
+  <%= form_tag "/todos", method: :post, remote: true do %>
+    <%= text_field_tag :description, description, placeholder: "task" , id: "input" %>
+    <%= submit_tag "Add" %>
+  <% end %>
+</div>

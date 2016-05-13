@@ -1,0 +1,3 @@
+var $container = $("#todo-list-container");
+$container.prepend("<%=j cell(:todo, @todo).(:show) %>");
+$("#input").val('');
