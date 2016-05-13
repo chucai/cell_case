@@ -1,9 +1,5 @@
-<%= cell(:todo, Todo.new).(:form) %>
-<h1>
-  Todos
-</h1>
 <ul id="todo-list-container">
-  <% @model.each do |item| %>
+  <% @items.each do |item| %>
     <%= cell :todo, item %>
   <% end -%>
 </ul>
