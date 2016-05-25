@@ -1,16 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import Todos from './Todos/Todos';
-import MainLayout from '../layouts/MainLayout/MainLayout';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { DatePicker, message, Button } from 'antd';
 
-const App = ({ location }) => {
-  return (
-    <MainLayout>
-      <Todos location={location} />
-    </MainLayout>
-  );
-};
+const App = React.createClass({
+  render() {
+    return <div>
+      <Button type='primary' icon='search'>Hello world</Button>
+      </div>;
+  }
+});
 
-App.propTypes = {
-};
+window.App = App;
 
 export default App;
