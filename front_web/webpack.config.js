@@ -5,6 +5,7 @@ const webpack = require('atool-build/lib/webpack');
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+const assetPath = path.join(__dirname, '../', 'public', 'assets');
 
 module.exports = function (webpackConfig) {
   webpackConfig.babel.plugins.push('transform-runtime');
@@ -36,6 +37,9 @@ module.exports = function (webpackConfig) {
     return memo;
   }, {});
   webpackConfig.entry = Object.assign({}, webpackConfig.entry, newEntries);
+
+  //配置输出路径
+  webpackConfig.output.path = assetPath;
 
   return webpackConfig;
 };
