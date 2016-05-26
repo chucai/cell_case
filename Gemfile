@@ -62,3 +62,4 @@ group :development do
   gem 'spring'
 end
 
+gem 'react_on_rails', '~> 5'
