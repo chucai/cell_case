@@ -36,6 +36,7 @@ export default class HelloWorldWidget extends React.Component {
           Hello, {name}!
         </h3>
         <hr />
+        <br/>
         <form className="form-horizontal">
           <label>
             Say hello to:

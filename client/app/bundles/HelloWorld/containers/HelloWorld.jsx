@@ -28,6 +28,7 @@ export default class HelloWorld extends React.Component {
   render() {
     return (
       <div>
+        <p>测试HelloWorldWidget...</p>
         <HelloWorldWidget name={this.state.name} updateName={this.updateName} />
       </div>
     );
