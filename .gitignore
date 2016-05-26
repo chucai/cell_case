@@ -15,3 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+/front_web/
+/public/assets/
+
