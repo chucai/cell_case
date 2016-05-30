@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Button } from 'antd';
 import _ from 'lodash';
 
 export default class HelloRubyWidget extends React.Component {
@@ -26,6 +27,7 @@ export default class HelloRubyWidget extends React.Component {
           Hello, {name}!
         </h3>
         <hr />
+        <Button type="primary">Primary</Button>
         <br/>
         <form className="form-horizontal">
           <label>

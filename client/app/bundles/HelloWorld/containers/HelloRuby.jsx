@@ -1,5 +1,6 @@
 import React, { PropTypes} from 'react';
 import HelloRubyWidget from '../components/HelloRubyWidget';
+import PopoverWidget from '../components/PopoverWidget';
 import _ from 'lodash';
 
 export default class HelloRuby extends React.Component {
@@ -23,6 +24,8 @@ export default class HelloRuby extends React.Component {
         <p>Hello Ruby 测试</p>
         <br/>
         <HelloRubyWidget name={this.state.name} updateName={this.updateName} />
+        <br/>
+        <PopoverWidget />
       </div>
     );
   }

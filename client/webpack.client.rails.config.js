@@ -7,6 +7,7 @@
 const webpack = require('webpack');
 const config = require('./webpack.client.base.config');
 const devBuild = process.env.NODE_ENV !== 'production';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 config.output = {
   filename: '[name]-bundle.js',
@@ -37,8 +38,20 @@ config.module.loaders.push(
   {
     test: require.resolve('jquery-ujs'),
     loader: 'imports?jQuery=jquery',
+  },
+  {
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+  },
+  {
+    test: /\.less$/,
+    loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
   }
 );
+
+config.plugins = [
+  new ExtractTextPlugin("[name].css"),
+];
 
 module.exports = config;
 

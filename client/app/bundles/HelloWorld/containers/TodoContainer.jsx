@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import TodoFormWidget from '../components/TodoFormWidget';
 import TodoListWidget from '../components/TodoListWidget';
+import PopoverWidget from '../components/PopoverWidget';
 import _ from 'lodash';
 
 export default class TodoContainer extends React.Component {
@@ -36,10 +37,13 @@ export default class TodoContainer extends React.Component {
 
   render() {
     return (
-        <div class='todo-container'>
+      <div class='todo-container'>
         <TodoFormWidget addItem={this.addItem} />
         <TodoListWidget items={this.state.items} />
-       </div>
+
+        <br/>
+        <PopoverWidget />
+      </div>
     );
   };
 };
